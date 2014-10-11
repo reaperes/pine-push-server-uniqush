@@ -13,7 +13,7 @@ RUN \
   mkdir -p /etc/redis && \
   cp -f *.conf /etc/redis && \
   rm -rf /tmp/redis-stable* && \
-  sed -i 's/^\(daemonize .*\)$/daemonize true/' /etc/redis/redis.conf && \
+  sed -i 's/^\(daemonize .*\)$/daemonize yes/' /etc/redis/redis.conf && \
   sed -i 's/^\(dir .*\)$/# \1\ndir \/data/' /etc/redis/redis.conf && \
   sed -i 's/^\(logfile .*\)$/# \1/' /etc/redis/redis.conf && \
   sed -i 's/^\(port .*\)$/port 8521/' /etc/redis/redis.conf
