@@ -16,7 +16,7 @@ RUN \
   sed -i 's/^\(daemonize .*\)$/daemonize true/' /etc/redis/redis.conf && \
   sed -i 's/^\(dir .*\)$/# \1\ndir \/data/' /etc/redis/redis.conf && \
   sed -i 's/^\(logfile .*\)$/# \1/' /etc/redis/redis.conf && \
-  sed -i 's/^\(port \d*\)$/port 8521/' /etc/redis/redis.conf
+  sed -i 's/^\(port .*\)$/port 8521/' /etc/redis/redis.conf
 # sed -i 's/^\(logfile .*\)$/# \1/' /etc/redis/redis.conf && \ # logging off
 # sed -i 's/^\(bind .*\)$/# \1/' /etc/redis/redis.conf && \ # bind 127.0.0.1
 
