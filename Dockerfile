@@ -43,4 +43,4 @@ VOLUME ["/data"]
 
 CMD ["/start.sh"]
 
-EXPOSE 8521
+EXPOSE 8520
