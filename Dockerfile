@@ -22,6 +22,6 @@ RUN \
 
 VOLUME ["/data"]
 
-CMD ["redis-server", "/etc/redis/redis.conf"]
+CMD ["/bin/bash", "redis-server", "/etc/redis/redis.conf"]
 
 EXPOSE 8521
