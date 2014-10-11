@@ -36,9 +36,10 @@ RUN \
   sed -i 's/^\(addr.*\)$/addr=localhost:8520/' /etc/uniqush/uniqush-push.conf
 
 
+ADD ./start.sh /start.sh
 
 VOLUME ["/data"]
 
-CMD ["redis-server", "/etc/redis/redis.conf"]
+CMD ["/start.sh"]
 
 EXPOSE 8521
