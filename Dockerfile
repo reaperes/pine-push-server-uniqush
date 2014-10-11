@@ -37,6 +37,7 @@ RUN \
 
 
 ADD ./start.sh /start.sh
+RUN chmod 755 /start.sh
 
 VOLUME ["/data"]
 
