@@ -21,7 +21,6 @@ RUN \
 # sed -i 's/^\(logfile .*\)$/# \1/' /etc/redis/redis.conf && \ # logging off
 
 # Install uniqush-push
-# Install uniqush-push
 RUN \
   cd /tmp && \
   wget http://uniqush.org/downloads/uniqush-push_1.5.2_x86_64.tar.gz && \
@@ -34,6 +33,7 @@ RUN \
   sed -i 's/^\(port.*\)$/port=8521/' /etc/uniqush/uniqush-push.conf && \
   sed -i 's/^\(logfile.*\)$/logfile=\/data/' /etc/uniqush/uniqush-push.conf && \
   sed -i 's/^\(addr.*\)$/addr=localhost:8520/' /etc/uniqush/uniqush-push.conf
+
 
 
 ADD ./start.sh /start.sh
