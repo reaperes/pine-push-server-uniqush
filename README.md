@@ -7,10 +7,12 @@ Installation
 -------------
 Install docker (http://docs.docker.com/installation/ubuntulinux/)
 
-Run
+Pre-Run
 ----
-    docker run -d \
-               -p 8520:8520
-               reaperes/pine-push-server-uniqush
+    1. docker run -it \
+                  -p 8520:8520 \
+                  reaperes/pine-push-server-uniqush \
+                  bin/bash
+    2. wget $apns_certification
 
 You can tail the logs using `docker logs -f $container_id`
