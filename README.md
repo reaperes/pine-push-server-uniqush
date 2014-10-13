@@ -11,6 +11,6 @@ Run
 ----
     docker run -d \
                -p 8520:8520
-               reaperes/docker-uniqush-push
+               reaperes/pine-push-server-uniqush
 
 You can tail the logs using `docker logs -f $container_id`
