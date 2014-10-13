@@ -32,7 +32,7 @@ RUN \
   rm -rf /tmp/uniqush-push_1.5.2_x86_64* && \
   sed -i 's/^\(port.*\)$/port=8521/' /etc/uniqush/uniqush-push.conf && \
   sed -i 's/^\(logfile.*\)$/logfile=\/data/' /etc/uniqush/uniqush-push.conf && \
-  sed -i 's/^\(addr.*\)$/addr=localhost:8520/' /etc/uniqush/uniqush-push.conf
+  sed -i 's/^\(addr.*\)$/addr=0.0.0.0:8520/' /etc/uniqush/uniqush-push.conf
 
 
 
