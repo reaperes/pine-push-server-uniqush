@@ -7,8 +7,8 @@ Installation
 -------------
 Install docker (http://docs.docker.com/installation/ubuntulinux/)
 
-Run
-----
+Run (Apns)
+-----------
     1. docker run -it \
                   -p 8520:8520 \
                   reaperes/pine-push-server-uniqush \
@@ -29,5 +29,24 @@ Run
             -d service=test \
             -d subscriber=test \
             -d msg="hello, apns"
+
+Run (Gcm)
+----------
+    1. same above
+    2. pass. gcm does not need require cert file
+    3. curl http://localhost:8520/addpsp \
+            -d service=test \
+            -d pushservicetype=gcm \
+            -d projectid=633680020112 \
+            -d apikey=$api_key
+    4. curl http://localhost:8520/subscribe \
+            -d service=test \
+            -d subscriber=namhoon \
+            -d pushservicetype=gcm \
+            -d regid=APA91bHcPxD-dSqk0qNu7RMSlBjO-DqJtcUzofa6dLU76IEArprvlfq7X82oHeIRNDxfyTOtYufnqHTTUBx4QS8U7ESaWpha2UGan2U06k9r1p-0x-cJrl22OpV0CMvs2cJq4KRreqtU_r8b-zIkNhys9phy0c7mpDVjA06if531VeIuJ5yQL6c
+    5. curl http://localhost:8520/push \
+            -d service=test \
+            -d subscriber=namhoon \
+            -d msg="hello, gcm"
 
 You can tail the logs using `docker logs -f $container_id`
