@@ -9,10 +9,9 @@ Install docker (http://docs.docker.com/installation/ubuntulinux/)
 
 Run (Apns)
 -----------
-    1. docker run -it \
+    1. docker run -d \
                   -p 8520:8520 \
-                  reaperes/pine-push-server-uniqush \
-                  /bin/bash
+                  reaperes/pine-push-server-uniqush
     2. wget /var/lib/docker/containers/$container_id/root/$apns_certification
     3. curl http://localhost:8520/addpsp \
             -d service=test \
