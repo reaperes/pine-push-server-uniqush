@@ -11,8 +11,10 @@ Run (Apns)
 -----------
     1. docker run -d \
                   -p 8520:8520 \
+                  --name uniqush \
                   reaperes/pine-push-server-uniqush
-    2. wget /var/lib/docker/containers/$container_id/root/$apns_certification
+
+    2. download file to /var/lib/docker/containers/$container_id/root/$apns_certification
     3. curl http://localhost:8520/addpsp \
             -d service=test \
             -d pushservicetype=apns \
