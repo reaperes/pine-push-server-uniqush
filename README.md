@@ -9,7 +9,7 @@ Install docker (http://docs.docker.com/installation/ubuntulinux/)
 
 Run (Apns)
 -----------
-    1. sudo docker run -d \
+    1. sudo docker run -ti \
             -p 127.0.0.1:8520:8520 \
             --name uniqush \
             reaperes/pine-push-server-uniqush
